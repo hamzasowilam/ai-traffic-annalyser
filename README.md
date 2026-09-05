@@ -29,3 +29,33 @@ An intelligent, real-time Network Intrusion Detection System (NIDS) combining su
 ├── intelligence.py      # Fingerprinting, drift monitoring & LLM analysis
 ├── attacker_sim.py      # Network packet & attack simulation engine
 └── .gitignore
+
+Network Traffic
+      ↓
+ Feature Extraction / Traffic Input
+      ↓
+ ┌──────────────────────┐
+ │   AI Detection Layer │
+ │                      │
+ │  XGBoost             │
+ │  Isolation Forest    │
+ └──────────┬───────────┘
+            ↓
+     Hybrid Decision
+            ↓
+   Normal / Attack
+            ↓
+ ┌─────────────────────────┐
+ │ Threat Intelligence     │
+ │                         │
+ │ SHAP Explainability     │
+ │ Attack Fingerprinting   │
+ │ Incident Timeline       │
+ │ Drift Monitoring        │
+ └────────────┬────────────┘
+              ↓
+       SOAR / Response
+              ↓
+     AI Incident Report
+              ↓
+       Firewall Blocking
